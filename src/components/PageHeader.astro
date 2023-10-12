@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+---
+
+
+<div class="header" data-bg-image-src="images/1920x544_bg3.jpg">
+  <div class="container header-container">
+    <h1 class="header-title">{title}</h1>
+  </div>
+</div>
+
+<style>
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: #242934;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-title {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>

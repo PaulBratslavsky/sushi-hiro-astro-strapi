@@ -3,5 +3,107 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Contact">
-  <h1>Contact Page</h1>
+  <div class="content-section">
+    <div class="row vr-size-4">
+      <div class="col-lg-6">
+        <p>
+          If you have any further enquiries, please use the contact information
+          or form below.
+        </p>
+        <div class="row">
+          <div class="col-sm-6">
+            <ul class="mad-our-info size-2 content-element-2">
+              <li class="content-element-2">
+                <span
+                  >56 12th Ave, <br />
+                   New York, NY 10011 <br />
+                  <a href="#" class="mad-dir mad-link">Get Direction</a>
+                </span>
+              </li>
+              <li>
+                <span>+1 800 603 6035</span>
+              </li>
+              <li>
+                <a href="#" class="mad-link color-2">mail@companyname.com</a>
+              </li>
+            </ul>
+            <div class="mad-social-icons style-2 size-2">
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-tripadvisor"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mad-timetable mad-vr-list">
+              <ul>
+                <li>
+                  <div class="mad-tt-title">Brunch</div>
+                   Saturday: 10am – 2pm
+                </li>
+                <li>
+                  <div class="mad-tt-title">Dinner</div>
+                   Monday – Thursday: 5pm – 10pm <br />
+                   Friday – Saturday: 4pm – 11pm
+                </li>
+                <li>
+                  <div class="mad-tt-title">Happy Hour</div>
+                   Monday – Thursday: 5pm – 6pm <br />
+                   Friday – Saturday: 2pm – 4pm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <form class="mad-contact-form">
+          <div class="mad-col">
+            <input
+              type="text"
+              id="cf_name"
+              name="cf_name"
+              required
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="mad-col">
+            <input
+              type="email"
+              id="cf_email"
+              name="cf_email"
+              required
+              placeholder="Your Email Address"
+            />
+          </div>
+          <div class="mad-col">
+            <input
+              type="tel"
+              id="cf_phone"
+              name="cf_phone"
+              required
+              placeholder="Phone Number"
+            />
+          </div>
+          <div class="mad-col">
+            <textarea
+              rows="7"
+              id="message"
+              name="cf_message"
+              required
+              placeholder="Message"></textarea>
+          </div>
+          <div class="mad-col align-right">
+            <button type="submit" class="btn btn-big"
+              ><span>Submit</span></button
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </Layout>
