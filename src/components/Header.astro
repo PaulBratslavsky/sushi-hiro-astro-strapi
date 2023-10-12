@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  logo: string;
+  links: Array<{
+    title: string;
+    href: string;
+  }>;
+}
+
+const { title, logo, links } = Astro.props;
+---
+
+<header id="mad-header" class="mad-header header-white with-bg">
+  <div>
+    <div class="container">
+      <div class="mad-header-items">
+        <div class="mad-header-item">
+          <a href="index.html" class="mad-logo"
+            ><img src="img/logo.png" alt="" /></a
+          >
+        </div>
+        <nav class="mad-navigation-container">
+          <ul class="mad-navigation mad-navigation--vertical-sm">
+            {
+              links.map((link) => {
+                return (
+                  <li class="menu-item">
+                    <a href={link.href}>{link.title}</a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<script>
+  const nav = document.querySelector(".mad-navigation");
+  const navItems = nav && nav.querySelectorAll(".menu-item");
+  const currentUrl = window.location.pathname;
+
+  navItems &&
+    navItems.forEach((element) => {
+      const anchor = element.children[0];
+      if (anchor && anchor.tagName === "A") {
+        const href = anchor.getAttribute("href");
+        if (href === currentUrl) element.classList.add("current-menu-item");
+      }
+    });
+</script>
